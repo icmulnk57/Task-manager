@@ -20,7 +20,7 @@ const AddTaskForm = ({ onTaskAdded }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/tasks', formData);
+      const response = await axios.post('https://task-manger-ycv1.onrender.com/api/tasks', formData);
       onTaskAdded(response.data);
       setFormData({ title: '', description: '', status: 'todo' });
     } catch (error) {

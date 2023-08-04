@@ -14,7 +14,7 @@ const App = () => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tasks');
+      const response = await axios.get('https://task-manger-ycv1.onrender.com/api/tasks');
       setTasks(response.data);
     } catch (error) {
       console.error('Failed to fetch tasks:', error);

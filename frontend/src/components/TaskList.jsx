@@ -7,7 +7,7 @@ const TaskList = ({ tasks, onTaskStatusChange, onTaskDelete }) => {
   const handleStatusChange = async (taskId, status) => {
     try {
         console.log('Updating task status:', taskId, status);
-        const response = await axios.patch(`http://localhost:5000/api/tasks/${taskId}`, { status });
+        const response = await axios.patch(`https://task-manger-ycv1.onrender.com/api/tasks/${taskId}`, { status });
         
         console.log('Response:', response.data);
         onTaskStatusChange(taskId, status);
@@ -19,7 +19,7 @@ const TaskList = ({ tasks, onTaskStatusChange, onTaskDelete }) => {
 
   const handleDelete = async (taskId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${taskId}`);
+      await axios.delete(`https://task-manger-ycv1.onrender.com/api/tasks/${taskId}`);
       onTaskDelete(taskId);
     } catch (error) {
       console.error('Failed to delete task:', error);
