@@ -1,0 +1,79 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  
+  
+}
+form{
+  background: linear-gradient(to right, rgba(126, 64, 246, 1), rgba(80, 139, 252, 1));
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem; /* You can adjust the font size as needed */
+  font-weight: bold;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input,
+textarea,
+select {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+input{
+  outline: none;
+  border: none;
+ 
+}
+textarea{
+  outline: none;
+  border: none;
+
+
+}
+
+
+@media (max-width: 575.98px) {
+  /* Adjust the form width for small screens */
+  form {
+    width: 100%;
+    padding: 10px;
+  }
+
+}
