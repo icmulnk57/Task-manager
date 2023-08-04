@@ -1,15 +1,13 @@
-const mongoose=require("mongoose");
 
+const mongoose=require("mongoose");
 const connectDatabase=()=>{
-    mongoose.connect('mongodb://localhost:27017/TaskManager',{
-        useUnifiedTopology:true,
+    mongoose.connect(process.env.DB,{
+        useNewUrlParser: true, 
+        useUnifiedTopology: true,
         
     }).then((data)=>{
-        console.log(`connection succsessfull at: ${data.connection.host}`)
-    }).catch((err)=>{
-        console.log("error found: ",err);
-    })
+        console.log(`database connection succsessfull at: ${data.connection.host}`)
+    });
 }
-
 
 module.exports=connectDatabase;
